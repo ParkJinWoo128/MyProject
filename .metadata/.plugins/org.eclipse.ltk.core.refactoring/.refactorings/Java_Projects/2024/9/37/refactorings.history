@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;myProject.수열&apos; to &apos;수열정렬&apos;&#x0D;&#x0A;- Original project: &apos;Java_Projects&apos;&#x0D;&#x0A;- Original element: &apos;myProject.수열&apos;&#x0D;&#x0A;- Renamed element: &apos;myProject.수열정렬&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;수열&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;myProject{수열.java[수열" matchStrategy="1" name="수열정렬" qualified="false" references="true" similarDeclarations="false" stamp="1726238671979" textual="false" version="1.0"/>
+</session>

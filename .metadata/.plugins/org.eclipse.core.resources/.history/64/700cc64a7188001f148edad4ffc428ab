@@ -1,0 +1,29 @@
+package myProject;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class CutLine {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // 입력
+        int N = sc.nextInt(); // 학생 수
+        int k = sc.nextInt(); // 상 받는 사람 수
+        Integer[] scores = new Integer[N];
+
+        // 학생들 점수 입력
+        for (int i = 0; i < N; i++) {
+            scores[i] = sc.nextInt();
+        }
+
+        // 점수 내림차순으로 정렬
+        Arrays.sort(scores, Collections.reverseOrder());
+
+        // k번째 높은 점수 출력
+        System.out.println(scores[k - 1]);
+
+        sc.close();
+    }
+}
