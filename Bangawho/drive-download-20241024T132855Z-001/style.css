@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* 정한 박스 사이즈에서 더 늘어나지 않게 해준다 */
+    box-sizing: border-box; 
+    
+}
+
+body {
+    /* 기본적으로 많이 쓰는 폰트이다 */
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    /* 얘는 가로정렬이다 */
+    justify-content: center;
+    /* 얘는 세로정렬이겠다 */
+    align-items: center;
+    /* vh라는 단위는 %로 바꿔서 생각하면 편하다. 100이면 100%쓴다 1이면 1%쓴다. */
+    height: 100vh;
+    background-color: #f3f3f3;
+}
+
+.login-box {
+    /* 범위를 볼 수 있다 */
+    /* border: 2px solid red; */
+    background-color: #fff;
+    /* 둘그러져요 */
+    border-radius: 12px;
+    /* 연하게 그림자를 준다 */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    /* 너무 붙어있어서 좀 띄어놓기위해 */
+    padding: 40px;
+    /* 정렬 */
+    text-align: center;
+    border: 2px solid #9c27b0;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #9c27b0;
+}
+
+.input-box {
+    /* 역시 이거로 범위 보기 가능 */
+    /* border: 1px solid red; */
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-box input {
+    /* 100%를 줘도 아까 준 패딩값을 제외한 나머지만 100%임 */
+    width: 100%;
+    padding: 10px;
+    /* 아까준 백 화이트를 없앤거다 */
+    background: none;
+    border: none;
+    border-bottom: 2px solid #9c27b0;
+    /* 못생긴 외각선 없애는 거 */
+    outline: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.input-box label {
+    /* 위치 마음대로 움직일거니까 앱솔루트 준다. */
+    position: absolute;
+    /* 위로 딱 붙일거다 */
+    top: 0;
+    left: 0;
+    padding: 10px;
+    font-size: 16px;
+    color: #9c27b0;
+    /* 이거하면 더이상 네이블이 클릭이 안됨 */
+    pointer-events: none;
+    /* 지금 딱 좋은데 너무 맛없음. 이거 쓰면 더 자연스럽다 */
+    transform: 0.5s;
+}
+
+/* 인풋이 클릭되었을때 */
+.input-box input:focus ~ label,
+/* 정확하게 입력해야 안내려옴 */
+.input-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #9c27b0;
+    font-size: 12px;
+}
+
+.remember-box {
+    display: flex;
+    align-items: center;
+    /* 플렉스스타느는 왼쪽정렬 */
+    justify-content: flex-start;
+    /* 너무 붙어있으니까 떄기 */
+    margin-bottom: 20px;
+}
+
+.remember-box input {
+    margin-right: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #9c27b0;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    /* 이제 마우스 가져다대면 마우스 생긴거 바뀜 */
+    cursor: pointer;
+    /* 저렇게 백컬러 쓰면 백컬러만 저장 */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #7b1fa2;
+}
