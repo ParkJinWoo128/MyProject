@@ -9,7 +9,7 @@
 </head>
 <body>
 	<main id="footer">
-		FDRKOREA-CopyLight~ 다음단계는 일요일~월요일에
+		FDRKOREA-CopyLight~
 	</main>
 </body>
 </html>
