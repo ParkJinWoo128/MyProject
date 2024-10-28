@@ -9,8 +9,10 @@ public class Yes {
 		
 		if (rd.nextDouble() < 0.5) {
             System.out.println("Gen.G Win");
+   
         } else {
             System.out.println("T1 Win");
+            System.out.println("제오구케가 승리하다");
         }
 	}
 }
