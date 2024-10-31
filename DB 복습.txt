@@ -1,0 +1,56 @@
+-- 사원 테이블과 부서 테이블을 조인하여
+-- 사원이름, 부서 위치를 출력하시오.
+-- 단, 근무지에 근무하는 사원이 없어도
+-- 부서의 모든 위치를 함께 출력하시오
+select e.eame, d.loc
+from emp e, dept d
+where e.detno(+) = d.deptno;
+
+-- ANSI 조인(표준이다)
+select e.eame, d.loc
+from emp e right outer join dept d
+on e.deptno = d.deptno;
+
+insert into emp(empno, ename, sal, job, deptno)
+values(8282, 'JACK' 3000, 'ANALYST', 50);
+
+select * from dept;
+
+-- 사원 테이블 자기 자신의 테이블과 조인하여
+-- 이름, 직업, 해당 사원의 관리자 이름, 관리자 직업을
+-- 출력하시오.
+select e.ename, e.job, m.enam, m.job
+from emp e, emp m
+where e.mgr = m.empno;
+
+--제약조건 조회
+select * from all_constrants
+where table_name = 'EMP';
+
+-- 제약조건 삭제
+alter table EMP drop constraint EMP_DEPT_FK;
+
+-- 제약조건 추가
+alter table EMP add constraint EMP_DEPT_FK foreign key(mgr)
+references emp(empno);
+
+-- 삭제하니 이제 됨
+insert into emp(empno, ename, sal, job, deptno)
+values(8282, 'JACK' 3000, 'ANALYST', 50);
+
+
+
+
+select e.ename, d.loc
+from emp e left outer join dept d
+on e.deptno = d.deptno;
+
+select e.ename, d.loc
+from emp e full outer join dept d
+on e.deptno = d.deptno;
+
+delete from emp where ename = 'JACK';
+
+alter table emp add constraint emp_dept_fk foreign key(deptno) references dept(depno);
+
+select * from all_constraints where table_name = 'EMP';
