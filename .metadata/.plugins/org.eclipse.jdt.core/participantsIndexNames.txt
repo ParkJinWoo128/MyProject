@@ -3,5 +3,7 @@ C:\Users\user\Projects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\376
 \Java_Projects
 C:\Users\user\Projects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2061669816.index
 \exam_01\src
+C:\Users\user\Projects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\179418180.index
+\exam_01\src
 C:\Users\user\Projects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2179225397.index
 \exam_01\src
